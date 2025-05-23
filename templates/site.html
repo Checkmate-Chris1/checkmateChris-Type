@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/site.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="/static/logo.png">
+        <script src="/static/site.js" defer></script>
+    </head>
+    <body>
+        <header id="site-header">
+            <img src="/static/logo.png">
+            <h1 id="title">CheckmateChris1-type</h1>
+        </header>
+        <div id="info-bar">
+            <div id="modes">
+                <button tabindex=-1 class="selected mode" id="words-mode" onclick="changeMode(1)">words</button>
+                <button tabindex=-1 class="mode" id="quotes-mode" onclick="changeMode(2)">quotes</button>
+                <button tabindex=-1 class="mode" id="custom-mode" onclick="changeMode(3)">custom</button>
+            </div>
+            <div id="lowerInfo-bar">
+                <div id="statistics">
+                    <div id="time">time: 0:00</div>
+                    <div id="wpm">wpm: 0</div>
+                </div>
+                <div id="mode-settings">
+                    <button tabindex=-1 class="setting" id="setting-1" onclick="changeSetting(1)">10</button>
+                    <button tabindex=-1 class="setting selected" id="setting-2" onclick="changeSetting(2)">25</button>
+                    <button tabindex=-1 class="setting" id="setting-3" onclick="changeSetting(3)">50</button>
+                    <button tabindex=-1 class="setting" id="setting-4" onclick="changeSetting(4)">100</button>
+                </div>
+            </div>
+        </div>
+        <div id="set-text-modal-background" class="modal-background">
+            <div id="set-text-modal", class="modal">
+                <h2 id="set-text-title">custom text</h2>
+                <textarea>Hello, world!</textarea>
+                <button id="set-text-close" onclick="hideSetTextModal()">Close</button>
+            </div>
+        </div>
+        <div tabindex=0 id="typing-area"></div>
+        <button id="restart", onclick="restart()">Restart</button>
+    </body>
+</html>
